@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Contato | EducaFácil</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <a href="index.html" class="logo">
+
+        Educa<span>Fácil</span>
+
+    </a>
+
+    <nav>
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a href="materias.html">
+            Matérias
+        </a>
+
+        <a href="quiz.html">
+            Quiz
+        </a>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="sobre.html">
+            Sobre
+        </a>
+
+        <a href="contato.html">
+            Contato
+        </a>
+
+    </nav>
+
+    <!-- DARK MODE -->
+
+    <button id="toggleTheme">
+        🌙
+    </button>
+
+</header>
+
+<!-- CONTATO -->
+
+<section class="contact-section">
+
+    <div class="contact-container">
+
+        <h1>
+            Entre em Contato
+        </h1>
+
+        <p>
+
+            Envie sua opinião,
+            sugestões ou melhorias
+            para o EducaFácil.
+
+        </p>
+
+        <!-- FORM -->
+
+        <form id="contact-form">
+
+            <!-- NOME -->
+
+            <div class="input-group">
+
+                <label>
+                    Nome Completo
+                </label>
+
+                <input
+                type="text"
+                name="nome"
+                required>
+
+            </div>
+
+            <!-- DATA -->
+
+            <div class="input-group">
+
+                <label>
+                    Data de Nascimento
+                </label>
+
+                <input
+                type="date"
+                name="nascimento"
+                required>
+
+            </div>
+
+            <!-- TELEFONE -->
+
+            <div class="input-group">
+
+                <label>
+                    Telefone
+                </label>
+
+                <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(11) 99999-9999"
+                required>
+
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="input-group">
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu email"
+                required>
+
+            </div>
+
+            <!-- SEXO -->
+
+            <div class="input-group">
+
+                <label>
+                    Sexo
+                </label>
+
+                <div class="radio-group">
+
+                    <label>
+
+                        <input
+                        type="radio"
+                        name="sexo"
+                        value="Masculino">
+
+                        Masculino
+
+                    </label>
+
+                    <label>
+
+                        <input
+                        type="radio"
+                        name="sexo"
+                        value="Feminino">
+
+                        Feminino
+
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- ESCOLARIDADE -->
+
+            <div class="input-group">
+
+                <label>
+                    Escolaridade
+                </label>
+
+                <select
+                id="escolaridade"
+                name="escolaridade"
+                required>
+
+                    <option value="">
+                        Selecione
+                    </option>
+
+                    <option value="Ensino Médio">
+                        Ensino Médio
+                    </option>
+
+                    <option value="Faculdade">
+                        Faculdade
+                    </option>
+
+                    <option value="Pós-graduação">
+                        Pós-graduação
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- FACULDADE -->
+
+            <div
+            class="input-group"
+            id="faculdadeInfo"
+            style="display:none;">
+
+                <label>
+                    Qual faculdade e curso?
+                </label>
+
+                <input
+                type="text"
+                name="faculdadeInfo"
+                placeholder="Ex: UNIP - Ciência da Computação">
+
+            </div>
+
+            <!-- MENSAGEM -->
+
+            <div class="input-group">
+
+                <label>
+                    Mensagem
+                </label>
+
+                <textarea
+                name="mensagem"
+                rows="6"
+                placeholder="Digite sua mensagem..."
+                required></textarea>
+
+            </div>
+
+            <!-- CHECKBOX -->
+
+            <div class="checkbox-group">
+
+                <label>
+
+                    <input
+                    type="checkbox"
+                    required>
+
+                    Concordo com o envio
+                    das informações.
+
+                </label>
+
+            </div>
+
+            <!-- BOTÃO -->
+
+            <button
+            type="submit"
+            class="btn-submit">
+
+                Enviar Mensagem
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+
+        © 2026 EducaFácil.
+        Todos os direitos reservados.
+
+    </p>
+
+</footer>
+
+<!-- DARK MODE -->
+
+<script src="theme.js"></script>
+
+<!-- EMAILJS -->
+
+<script
+type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script>
+
+/* =========================
+   INICIAR EMAILJS
+========================= */
+
+(function(){
+
+emailjs.init("oqQZeuMjqItpZQs3x");
+
+})();
+
+/* =========================
+   MOSTRAR FACULDADE
+========================= */
+
+const escolaridade =
+document.getElementById("escolaridade");
+
+const faculdadeInfo =
+document.getElementById("faculdadeInfo");
+
+escolaridade.addEventListener("change", ()=>{
+
+    if(
+        escolaridade.value === "Faculdade" ||
+        escolaridade.value === "Pós-graduação"
+    ){
+
+        faculdadeInfo.style.display = "block";
+
+    }else{
+
+        faculdadeInfo.style.display = "none";
+
+    }
+
+});
+
+/* =========================
+   VALIDAR EMAIL
+========================= */
+
+document.getElementById("email")
+.addEventListener("blur", function(){
+
+    if(
+        !this.value.includes("@") ||
+        !this.value.includes(".com")
+    ){
+
+        alert(
+            "Digite um email válido."
+        );
+
+    }
+
+});
+
+/* =========================
+   VALIDAR TELEFONE
+========================= */
+
+document.getElementById("telefone")
+.addEventListener("blur", function(){
+
+    if(this.value.length < 10){
+
+        alert(
+            "Digite um telefone válido."
+        );
+
+    }
+
+});
+
+/* =========================
+   ENVIAR FORMULÁRIO
+========================= */
+
+document
+.getElementById("contact-form")
+
+.addEventListener("submit", function(event){
+
+event.preventDefault();
+
+emailjs.sendForm(
+
+    "service_b99vg7u",
+    "template_5zry75b",
+    this
+
+)
+
+.then(()=>{
+
+    alert(
+        "Mensagem enviada com sucesso!"
+    );
+
+    this.reset();
+
+})
+
+.catch((error)=>{
+
+    alert(
+        "Erro ao enviar mensagem."
+    );
+
+    console.log(error);
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
