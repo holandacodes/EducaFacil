@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz - EducaFácil</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        Educa<span>Fácil</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">Início</a>
+        <a href="materias.html">Matérias</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="sobre.html">Sobre</a>
+
+    </nav>
+
+</header>
+
+<section class="quiz-container">
+
+    <div class="quiz-box">
+
+        <h1>Quiz de Programação</h1>
+
+        <div class="top-quiz">
+
+            <p id="contador">
+                Pergunta 1 de 5
+            </p>
+
+            <div id="timer">
+                30
+            </div>
+
+        </div>
+
+        <h2 id="pergunta"></h2>
+
+        <div id="respostas"></div>
+
+        <button id="nextBtn">
+            Próxima
+        </button>
+
+        <div class="progress-container">
+
+            <div id="progress"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>
